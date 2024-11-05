@@ -14,10 +14,10 @@ int main()
     {
         BeginDrawing();
         ClearBackground(darkBlue);
+        grid.Draw();
 
         EndDrawing();
     }
     
-
     CloseWindow();
 }
