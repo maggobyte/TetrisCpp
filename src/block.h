@@ -13,6 +13,8 @@ public:
     std::map<int, std::vector<Position>> cells;
     void Move(int rows, int columns);
     std::vector<Position> GetCellPosition();
+    void RotateBlock();
+    void UndoRotation();
 
 private:
     int cellSize;
