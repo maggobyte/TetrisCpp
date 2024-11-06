@@ -12,7 +12,7 @@ public:
     int id;
     std::map<int, std::vector<Position>> cells;
     void Move(int rows, int columns);
-    std::vector<Position> Block::GetCellPosition();
+    std::vector<Position> GetCellPosition();
 
 private:
     int cellSize;

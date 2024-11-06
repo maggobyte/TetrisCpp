@@ -12,6 +12,7 @@ int main()
     grid.Print();
 
     LBlock block = LBlock();
+    block.Move(4,3);
 
     while (WindowShouldClose() == false)
     {
