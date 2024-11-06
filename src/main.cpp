@@ -5,14 +5,13 @@
 int main() 
 {
     Color darkBlue = {44, 44, 127, 255};
-    InitWindow(300, 600, "Tetris cpp");
+    InitWindow(300, 600, "\033[40mTetris cpp\033[0m"); // Set title bar background to black
     SetTargetFPS(60);
 
     Grid grid = Grid();
     grid.Print();
 
-    LBlock block = LBlock();
-    block.Move(4,3);
+    IBlock block = IBlock();
 
     while (WindowShouldClose() == false)
     {
