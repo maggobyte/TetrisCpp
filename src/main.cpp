@@ -4,13 +4,14 @@
 int main() 
 {
     Color darkBlue = {44, 44, 127, 255};
-    InitWindow(300, 600, "\033[40mTetris cpp\033[0m"); // Set title bar background to black
+    InitWindow(300, 600, "Tetris Cpp");
     SetTargetFPS(60);
 
     Game game = Game();
 
     while (WindowShouldClose() == false)
     {
+        game.HandleInput();
         BeginDrawing();
         ClearBackground(darkBlue);
         game.Draw();
