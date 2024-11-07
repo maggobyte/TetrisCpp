@@ -17,8 +17,10 @@ bool EventTriggered(double interval)
 int main() 
 {
     Color darkBlue = {44, 44, 127, 255};
-    InitWindow(300, 600, "Tetris Cpp");
+    InitWindow(500, 620, "Tetris Cpp");
     SetTargetFPS(60);
+
+    Font font = LoadFontEx("Font/monogram.ttf", 64, 0, 0);
 
     Game game = Game();
 
