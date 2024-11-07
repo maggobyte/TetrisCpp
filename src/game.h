@@ -6,11 +6,13 @@ class Game
 {
 public:
     Game();
+    ~Game();
     void Draw();
     bool gameOver;
     int score;
     void HandleInput();
     void MoveBlockDown();
+    Music music;
 
 private:
     Grid grid;
@@ -19,6 +21,8 @@ private:
     Block currentBlock;
     Block nextBlock;
     Block GetRandomBlock();
+    Sound clearSound;
+    Sound rotateSound;
     bool IsBlockOutside();
     bool BlockFits();
     void MoveBlockLeft();
