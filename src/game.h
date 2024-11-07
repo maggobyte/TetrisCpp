@@ -14,6 +14,7 @@ public:
     void MoveBlockLeft();
     void MoveBlockRight();
     void MoveBlockDown();
+    bool gameOver;
 
 private:
     std::vector<Block> blocks;

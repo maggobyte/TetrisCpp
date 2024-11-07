@@ -7,6 +7,7 @@ Game::Game()
     blocks = GetAllBlocks();
     currentBlock = GetRandomBlock();
     nextBlock = GetRandomBlock();
+    gameOver = false;
 }
 
 Block Game::GetRandomBlock()
@@ -113,6 +114,10 @@ void Game::LockBlock()
         grid.grid[item.row][item.column] = currentBlock.id;
     }
     currentBlock = nextBlock;
+    if(BlockFits() == false)
+    {
+        gameOver = true;
+    }
     nextBlock = GetRandomBlock();
     grid.ClearFullRows();
 }
