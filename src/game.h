@@ -15,6 +15,7 @@ public:
     void MoveBlockRight();
     void MoveBlockDown();
     bool gameOver;
+    int score;
 
 private:
     std::vector<Block> blocks;
@@ -25,4 +26,5 @@ private:
     void RotateBlock();
     void LockBlock();
     void Reset();
+    void UpdateScore(int linesCleared, int moveDownPoints);
 };
