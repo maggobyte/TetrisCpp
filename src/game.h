@@ -24,4 +24,5 @@ private:
     bool BlockFits();
     void RotateBlock();
     void LockBlock();
+    void Reset();
 };

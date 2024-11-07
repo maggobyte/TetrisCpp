@@ -37,6 +37,11 @@ void Game::Draw()
 void Game::HandleInput()
 {
     int keyPressed = GetKeyPressed();
+    if(gameOver && keyPressed != 0)
+    {
+        gameOver = false;
+        Reset();
+    }
     switch(keyPressed)
     {
     case KEY_LEFT:
@@ -144,4 +149,12 @@ bool Game::BlockFits()
         }
     }
     return true;
+}
+
+void Game::Reset()
+{
+    grid.Initialize();
+    blocks = GetAllBlocks();
+    currentBlock = GetRandomBlock();
+    nextBlock = GetRandomBlock();
 }
